@@ -5,7 +5,7 @@ M.general = {
     ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "Window left" },
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "Window right" },
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>",  "Window down" },
-    ["<C-k>"] = { "<cmd> TmuxNavigateUP<CR>", "Window up" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "Window up" },
   }
 }
 
@@ -32,6 +32,11 @@ M.dap = {
     ["<leader>dui"] = {
       function ()
         require("dapui").toggle();
+      end
+    },
+    ["<leader>dpr"] = {   -- Debug Python Run
+      function()
+        require("dap").continue()
       end
     }
   }
